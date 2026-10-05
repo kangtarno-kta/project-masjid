@@ -1,0 +1,238 @@
+/* =========================================
+   MASJID AL-BAROKAH - FRONTEND
+========================================= */
+
+:root {
+    --albarokah-green: #085c43;
+    --albarokah-dark: #053226;
+    --albarokah-gold: #c18f07;
+    --albarokah-light: #f8faf9;
+}
+
+
+/* =========================================
+   GENERAL
+========================================= */
+
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: #ffffff;
+    color: #212529;
+}
+
+a {
+    transition: all .25s ease;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    background: linear-gradient(
+        135deg,
+        var(--albarokah-dark),
+        var(--albarokah-green)
+    ) !important;
+}
+
+.navbar-brand {
+    letter-spacing: .3px;
+}
+
+.navbar .nav-link {
+    /* color: rgba(255, 255, 255, .9); */
+    color: rgba(255, 255, 255, .9);
+    font-weight: 500;
+    margin: 0 2px;
+    border-radius: 8px;
+    transition: all .25s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, .12);
+    transform: translateY(-1px);
+}
+
+.navbar .dropdown-menu {
+    border: 0;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+}
+
+.navbar .dropdown-item {
+    padding: 10px 16px;
+}
+
+.navbar .dropdown-item:hover {
+    background: rgba(8, 127, 91, .08);
+    color: var(--albarokah-green);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+#heroMasjid {
+    border-radius: 24px !important;
+}
+
+#heroMasjid .carousel-item {
+    transition: transform .8s ease-in-out;
+}
+
+#heroMasjid .carousel-item > div {
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(255,255,255,.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            var(--albarokah-dark),
+            var(--albarokah-green)
+        ) !important;
+}
+
+#heroMasjid h1,
+#heroMasjid h2 {
+    letter-spacing: -.5px;
+}
+
+#heroMasjid .btn {
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.card {
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .10) !important;
+}
+
+.card i {
+    transition: transform .3s ease;
+}
+
+.card:hover i {
+    transform: scale(1.1);
+}
+
+
+/* =========================================
+   SERVICE CARD
+========================================= */
+
+#tentang .card,
+section.bg-light .card {
+    background: #fff;
+}
+
+section.bg-light .card:hover {
+    border-color: rgba(8, 127, 91, .15);
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.btn-warning {
+    color: #212529;
+    font-weight: 600;
+}
+
+.btn-warning:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(244, 197, 66, .25);
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.bg-success {
+    background:
+        linear-gradient(
+            135deg,
+            var(--albarokah-dark),
+            var(--albarokah-green)
+        ) !important;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background:
+        linear-gradient(
+            135deg,
+            #101716,
+            #17221f
+        ) !important;
+}
+
+footer a:hover {
+    color: var(--albarokah-gold) !important;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 991.98px) {
+
+    .navbar .nav-link {
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+
+    .navbar .btn {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    #heroMasjid .carousel-item > div {
+        min-height: 360px !important;
+    }
+
+    #heroMasjid h1 {
+        font-size: 2.3rem;
+    }
+
+}
+
+@media (max-width: 575.98px) {
+
+    #heroMasjid .carousel-item > div {
+        min-height: 430px !important;
+        padding: 35px 25px !important;
+    }
+
+    #heroMasjid h1 {
+        font-size: 2rem;
+    }
+
+    #heroMasjid .lead {
+        font-size: 1rem;
+    }
+
+}
